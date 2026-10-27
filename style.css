@@ -75,6 +75,7 @@ section{border-top:1px solid var(--ink)}
 .dark{background:var(--ink);color:var(--paper)}
 .dark a{color:var(--paper)}
 .dark a:hover{color:var(--soft)}
+.dark a.btn-white,.dark a.btn-white:hover{color:var(--ink)}
 .contact{padding:112px 0 64px;border-top:1px solid var(--ink)}
 .contact .wrap{display:flex;flex-direction:column;gap:48px}
 .contact h2{font-size:clamp(40px,7vw,96px);line-height:1}
