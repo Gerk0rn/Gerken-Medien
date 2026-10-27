@@ -16,14 +16,14 @@ concurrency:
 
 jobs:
   deploy:
-    name: Deploy via SFTP
+    name: Upload website via SFTP
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Upload website
+      - name: Upload website files
         uses: Dylan700/sftp-upload-action@v1.2.5
         with:
           server: ${{ secrets.STRATO_HOST }}
@@ -31,10 +31,7 @@ jobs:
           password: ${{ secrets.STRATO_PASSWORD }}
           port: 22
           uploads: |
-            ./index.html => ./index.html
-            ./css/ => ./css/
-            ./js/ => ./js/
-            ./images/ => ./images/
+            ./* => ./
           ignore: |
-            **/.git/**
-            **/.github/**
+            .git/**
+            .github/**
