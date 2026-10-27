@@ -16,19 +16,25 @@ concurrency:
 
 jobs:
   deploy:
+    name: Deploy via SFTP
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Deploy website to STRATO
-        uses: appleboy/scp-action@v1
+      - name: Upload website
+        uses: Dylan700/sftp-upload-action@v1.2.5
         with:
-          host: ${{ secrets.STRATO_HOST }}
+          server: ${{ secrets.STRATO_HOST }}
           username: ${{ secrets.STRATO_USER }}
           password: ${{ secrets.STRATO_PASSWORD }}
           port: 22
-          source: "index.html,css/**,js/**,images/**"
-          target: ${{ secrets.STRATO_REMOTE_PATH }}
-          overwrite: true
+          uploads: |
+            ./index.html => ./index.html
+            ./css/ => ./css/
+            ./js/ => ./js/
+            ./images/ => ./images/
+          ignore: |
+            **/.git/**
+            **/.github/**
