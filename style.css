@@ -100,10 +100,24 @@ a.card{text-decoration:none}
 /* Rechtstexte */
 .legal{padding:80px 0 112px;border-top:0}
 .legal .wrap{max-width:820px}
-.legal h1{font-size:clamp(40px,6vw,72px);margin-bottom:48px}
+.legal h1{font-size:clamp(28px,8vw,72px);margin-bottom:48px;overflow-wrap:break-word}
 .legal h2{font-size:24px;letter-spacing:-0.01em;margin:48px 0 12px}
 .legal h3{font-size:18px;letter-spacing:0;margin:28px 0 8px}
 .legal p,.legal li{color:#222;margin-bottom:12px}
 .legal ul{padding-left:22px;margin:0 0 12px}
 .legal address{font-style:normal;margin-bottom:12px}
 .legal .stand{margin-top:48px;color:var(--muted);font-size:14px}
+
+/* Datenschutz-Hinweis */
+.linklike{background:none;border:0;padding:8px 0;margin:0;font:inherit;color:var(--soft);cursor:pointer;text-decoration:none}
+.linklike:hover{color:var(--paper)}
+.cookie{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--ink);color:var(--paper);border-top:1px solid var(--paper)}
+.cookie[hidden]{display:none}
+.cookie-inner{max-width:1200px;margin:0 auto;padding:20px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px}
+.cookie-text{flex:1 1 420px;font-size:15px}
+.cookie-text strong{display:block;font-size:13px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:4px}
+.cookie-text p{color:#E5E5E5}
+.cookie a{color:var(--paper);text-decoration:underline}
+.cookie a:hover{color:var(--soft)}
+.cookie .btn{cursor:pointer;font-family:inherit}
+.cookie :focus-visible{outline-color:var(--paper)}
