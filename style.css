@@ -18,9 +18,10 @@ p{margin:0}
 .site-header{border-bottom:1px solid var(--ink)}
 .site-header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-top:18px;padding-bottom:18px}
 .brand img{height:60px;width:auto}
-.nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font-size:15px;font-weight:500}
-.nav a{text-decoration:none;padding:10px 0}
-.nav a.btn-nav{background:var(--ink);color:var(--paper);padding:12px 22px}
+.nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 6px;font-size:15px;font-weight:500}
+.nav a{text-decoration:none;padding:12px 22px;color:var(--ink);transition:background-color .2s ease,color .2s ease}
+.nav a:hover{background:var(--ink);color:var(--paper)}
+.nav a.btn-nav{background:var(--ink);color:var(--paper)}
 .nav a.btn-nav:hover{background:var(--muted);color:var(--paper)}
 
 /* Buttons */
@@ -58,7 +59,7 @@ section{border-top:1px solid var(--ink)}
 .card h3{font-size:24px;letter-spacing:-0.01em;line-height:1.2}
 .card p{color:var(--muted);transition:color .2s ease}
 .card:hover p{color:var(--paper)}
-@media (prefers-reduced-motion:reduce){.card,.card p{transition:none}}
+@media (prefers-reduced-motion:reduce){.card,.card p,.nav a{transition:none}}
 .two{display:flex;flex-wrap:wrap;gap:48px}
 .two>*{flex:1 1 360px}
 .text{display:flex;flex-direction:column;gap:20px;font-size:18px;color:var(--muted)}
