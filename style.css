@@ -25,13 +25,14 @@ p{margin:0}
 .nav a.btn-nav:hover{background:var(--muted);color:var(--paper)}
 
 /* Buttons */
-.btn{display:inline-flex;align-items:center;min-height:52px;padding:0 32px;font-weight:700;font-size:16px;text-decoration:none;border:2px solid var(--ink)}
+.btn{display:inline-flex;align-items:center;min-height:52px;padding:0 32px;font-weight:700;font-size:16px;text-decoration:none;border:2px solid var(--ink);transition:background-color .2s ease,color .2s ease,border-color .2s ease}
 .btn-solid{background:var(--ink);color:var(--paper)}
-.btn-solid:hover{background:var(--muted);border-color:var(--muted);color:var(--paper)}
+.btn-solid:hover{background:var(--paper);border-color:var(--ink);color:var(--ink)}
 .btn-line{background:transparent;color:var(--ink)}
 .btn-line:hover{background:var(--ink);color:var(--paper)}
 .btn-white{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn-white:hover{background:var(--soft);border-color:var(--soft);color:var(--ink)}
+.btn-white:hover{background:var(--ink);border-color:var(--paper);color:var(--paper)}
+.btn-ghost{background:transparent;color:var(--paper);border-color:var(--paper)}
 
 /* Hero */
 .hero{padding:120px 0 112px}
@@ -59,7 +60,7 @@ section{border-top:1px solid var(--ink)}
 .card h3{font-size:24px;letter-spacing:-0.01em;line-height:1.2}
 .card p{color:var(--muted);transition:color .2s ease}
 .card:hover p{color:var(--paper)}
-@media (prefers-reduced-motion:reduce){.card,.card p,.nav a{transition:none}}
+@media (prefers-reduced-motion:reduce){.card,.card p,.nav a,.btn{transition:none}}
 .two{display:flex;flex-wrap:wrap;gap:48px}
 .two>*{flex:1 1 360px}
 .text{display:flex;flex-direction:column;gap:20px;font-size:18px;color:var(--muted)}
@@ -76,7 +77,10 @@ section{border-top:1px solid var(--ink)}
 .dark{background:var(--ink);color:var(--paper)}
 .dark a{color:var(--paper)}
 .dark a:hover{color:var(--soft)}
-.dark a.btn-white,.dark a.btn-white:hover{color:var(--ink)}
+.dark a.btn-white{color:var(--ink)}
+.dark a.btn-white:hover{color:var(--paper)}
+.dark a.btn-ghost{color:var(--paper)}
+.dark a.btn-ghost:hover{background:var(--paper);color:var(--ink)}
 .contact{padding:112px 0 64px;border-top:1px solid var(--ink)}
 .contact .wrap{display:flex;flex-direction:column;gap:48px}
 .contact h2{font-size:clamp(40px,7vw,96px);line-height:1}
