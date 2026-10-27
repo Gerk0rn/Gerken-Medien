@@ -5,9 +5,14 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: read
+
+concurrency:
+  group: strato-deployment
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -17,7 +22,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Upload website to STRATO
+      - name: Deploy website to STRATO
         uses: appleboy/scp-action@v1
         with:
           host: ${{ secrets.STRATO_HOST }}
@@ -26,3 +31,4 @@ jobs:
           port: 22
           source: "index.html,css/**,js/**,images/**"
           target: ${{ secrets.STRATO_REMOTE_PATH }}
+          overwrite: true
