@@ -10,8 +10,10 @@
   function speichern() {
     try { window.localStorage.setItem(KEY, '1'); } catch (e) { /* Speicher gesperrt: Banner erscheint beim nächsten Besuch erneut */ }
   }
-  function zeigen() { banner.hidden = false; }
-  function schliessen() { banner.hidden = true; }
+  function hoehe() { document.documentElement.style.setProperty('--cookie-h', banner.hidden ? '0px' : banner.offsetHeight + 'px'); }
+  function zeigen() { banner.hidden = false; hoehe(); }
+  function schliessen() { banner.hidden = true; hoehe(); }
+  window.addEventListener('resize', hoehe);
 
   if (!gespeichert()) zeigen();
 

@@ -121,3 +121,10 @@ a.card{text-decoration:none}
 .cookie a:hover{color:var(--soft)}
 .cookie .btn{cursor:pointer;font-family:inherit}
 .cookie :focus-visible{outline-color:var(--paper)}
+
+/* WhatsApp-Button (Entwurf) */
+.wa-float{position:fixed;right:24px;bottom:calc(24px + var(--cookie-h,0px));z-index:40;display:inline-flex;align-items:center;gap:10px;min-height:56px;padding:0 22px 0 18px;background:var(--ink);color:var(--paper);border:2px solid var(--paper);box-shadow:0 0 0 1px var(--ink),0 8px 24px rgba(0,0,0,.25);text-decoration:none;font-weight:700;font-size:15px;transition:background-color .2s ease,color .2s ease,bottom .2s ease}
+.wa-float:hover{background:var(--paper);color:var(--ink);border-color:var(--ink)}
+.wa-float .wa-icon{flex:none}
+@media (max-width:560px){.wa-float{right:16px;padding:0 16px;gap:0}.wa-float .wa-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
+@media (prefers-reduced-motion:reduce){.wa-float{transition:none}}
