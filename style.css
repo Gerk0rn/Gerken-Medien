@@ -128,3 +128,11 @@ a.card{text-decoration:none}
 .wa-float .wa-icon{flex:none}
 @media (max-width:560px){.wa-float{right:16px;padding:0 16px;gap:0}.wa-float .wa-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
 @media (prefers-reduced-motion:reduce){.wa-float{transition:none}}
+
+/* Großer Call-to-Action im Header */
+.btn-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:104px;padding:0 40px;background:var(--ink);color:var(--paper);border:3px solid var(--ink);text-decoration:none;font-size:clamp(22px,3.4vw,36px);font-weight:800;letter-spacing:-0.01em;line-height:1.1;transition:background-color .2s ease,color .2s ease}
+.btn-cta:hover{background:var(--paper);color:var(--ink)}
+.btn-cta .arrow{font-size:1.3em;transition:transform .2s ease}
+.btn-cta:hover .arrow{transform:translateX(8px)}
+@media (max-width:560px){.btn-cta{min-height:88px;padding:0 24px}}
+@media (prefers-reduced-motion:reduce){.btn-cta,.btn-cta .arrow{transition:none}}
