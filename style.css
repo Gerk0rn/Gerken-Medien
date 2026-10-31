@@ -136,3 +136,6 @@ a.card{text-decoration:none}
 .btn-cta:hover .arrow{transform:translateX(8px)}
 @media (max-width:560px){.btn-cta{min-height:88px;padding:0 24px}}
 @media (prefers-reduced-motion:reduce){.btn-cta,.btn-cta .arrow{transition:none}}
+
+.cta-note{margin-top:-16px;font-size:18px;color:var(--muted)}
+.cta-note strong{color:var(--ink);font-weight:800}
