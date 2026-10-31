@@ -1,5 +1,5 @@
 /* Gerken Medien – schlichtes Schwarz-Weiß-Design, keine externen Ressourcen */
-:root{--ink:#0A0A0A;--paper:#FFFFFF;--muted:#555555;--soft:#BDBDBD}
+:root{--signal:#D90429;--ink:#0A0A0A;--paper:#FFFFFF;--muted:#555555;--soft:#BDBDBD}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
@@ -130,8 +130,8 @@ a.card{text-decoration:none}
 @media (prefers-reduced-motion:reduce){.wa-float{transition:none}}
 
 /* Großer Call-to-Action im Header */
-.btn-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:104px;padding:0 40px;background:var(--ink);color:var(--paper);border:3px solid var(--ink);text-decoration:none;font-size:clamp(22px,3.4vw,36px);font-weight:800;letter-spacing:-0.01em;line-height:1.1;transition:background-color .2s ease,color .2s ease}
-.btn-cta:hover{background:var(--paper);color:var(--ink)}
+.btn-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:104px;padding:0 40px;background:var(--signal);color:var(--paper);border:3px solid var(--signal);text-decoration:none;font-size:clamp(22px,3.4vw,36px);font-weight:800;letter-spacing:-0.01em;line-height:1.1;transition:background-color .2s ease,color .2s ease}
+.btn-cta:hover{background:var(--paper);color:var(--signal)}
 .btn-cta .arrow{font-size:1.3em;transition:transform .2s ease}
 .btn-cta:hover .arrow{transform:translateX(8px)}
 @media (max-width:560px){.btn-cta{min-height:88px;padding:0 24px}}
